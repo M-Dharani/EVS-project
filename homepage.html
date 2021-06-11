@@ -1,0 +1,130 @@
+
+
+
+
+<html>
+<head>
+<title>HOME PAGE</title>
+<link rel="stylesheet" href="./b1.css" id="1"/> 
+<link rel="stylesheet" href="./style1.css" /> 
+</head>
+
+
+<body onload="Back()">
+<div ><span class="hed"><center><h1>MODERN GARDENING AND AGRICULTURE ASSISTANCE</h1></center></span></div>
+
+
+	<div>
+	<pre style="font-size: 28px">
+	
+              
+<font color="purple"><b>This website is to guide the youngsters who are interested in <mark>GARDENING</mark> and <mark>AGRICULTURE</mark>
+                    to choose plants suitable for the land and surroundings....!!</b></font></pre>	
+	</div>
+	<marquee scrollamount="5">
+	<div style="padding-top: 10px; display: inline;" >
+	<span style="padding-left: 20px; float: left;">
+	<button>	
+		<img src="./brain.jpeg" alt="child()" style="width: 150px ;height:150px">
+	</button></span>
+	<span style="padding-left: 20px; float: left;">
+	<button>
+		<img src="./cartoon.jpeg" alt="bird()" style="width: 150px ;height:150px">
+	</button>
+	</span>
+	<span style="padding-left: 20px; float: left;">
+	<button>
+		<img src="./butterfly.jpeg" alt="trees()" style="width: 150px ;height:150px">
+	</button>
+	</span>
+	
+	</div>
+	</marquee>
+
+
+<form action="" target="_self" id="form1" name="form1">
+    
+    <center>
+        <h3 style="color: black">Let us know about your land...!!!</h3>
+        
+        <table border="0" width="50%">
+            <tbody style="background:rgba(200,195,255,0.5)">
+                <tr>
+                    <td>Soil Moisture(in %)</td>
+                    <td><input type="number" name="moisture" min="0" max="100"  /></td>
+                </tr>
+                <tr>
+                    <td>Soil Type</td>
+                    <td><select name="soil">
+                            <option>Chalky soil</option>
+                            <option>Clay soil</option>
+                            <option>Sandy soil</option>
+                            <option>Loamy soil</option>
+                            <option>Red soil</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>
+                        District
+                    </td>
+                    <td>
+                        <select name="district">
+                            <option>Chennai</option>
+                            <option>Trichy</option>
+                            <option>Nilgiris</option>
+                            <option>Tiruppur</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>What are you hoping for</td>
+                    <td><input type="radio" name="field" id="ag" value="agri" onclick="form_action()"/>AGRICULTURE<br>
+                        <input type="radio" name="field" id="ga" value="garden" onclick="form_action()"/>GARDENING
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+<input type="submit" value="A CLICK TO GO!!" style="background-color: purple; color:white; height:40px; "></center></form>
+
+<script type="text/javascript" >
+	
+	var set=setInterval(Back,2500);
+	var i=0;
+	function Back() {
+	x=document.getElementById("1");
+	var linkk=[
+	"./b1.css",
+	"./b2.css",
+	"./b3.css"
+	]
+		x.href=linkk[i];
+		i=i+1;
+		if(i==linkk.length) {
+			i=0;		
+		}
+	}
+	
+	function form_action(){
+            var gar= document.getElementById("ga").checked;
+            var agr= document.getElementById("ag").checked;
+            var formm=document.getElementById("form1");
+            if(gar==true){
+                formm.action="gardening.jsp";
+            }
+            if(agr==true){
+                formm.action="agriculture.jsp";
+            }
+        }	
+                
+                
+</script>
+
+<footer>
+<center>EVS Project</center><br>
+<marquee>Sowmya Kethana Geethanjali Dharani Kavia Sujitha Lavanya</marquee>
+
+</footer>
+</body>
+</html>
